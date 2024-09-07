@@ -1,0 +1,39 @@
+{
+  "name": "@reawayjs/async-validator",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build": "rimraf dist && rollup -c",
+    "prepublishOnly": "npm run build",
+    "release": "bumpp --commit --push --tag && npm publish"
+  },
+  "keywords": [
+    "validator",
+    "validate",
+    "async"
+  ],
+  "description": "validate form asynchronous",
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://github.com/reaway/async-validator",
+  "author": "yiminghe@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:reaway/async-validator.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@types/node": "^22.5.3",
+    "bumpp": "^9.5.2",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.21.2",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "typescript": "^5.5.4"
+  }
+}
